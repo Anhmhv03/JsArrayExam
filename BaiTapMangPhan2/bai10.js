@@ -1,6 +1,13 @@
 // Loại bỏ phần tử trùng lặp trong mảng.
-const loaiPhanTuTrung = (arr) => {
-  return [...new Set(arr)];
+const loaiPhanTuTrung = () => {
+  let total = [];
+  let arr = [1, 2, 3, 2, 4];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (!total.includes(arr[i])) {
+      total.push(arr[i]);
+    }
+  }
+  return total;
 };
-let arr = [1, 2, 3, 4, 2, 2];
-console.log(loaiPhanTuTrung(arr));
+console.log(loaiPhanTuTrung());
